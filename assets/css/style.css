@@ -20,17 +20,28 @@ body {
           align-items: center;
   font-family: 'Red Hat Text', sans-serif;
   text-align: center;
-  background-image: url(../images/pattern-hills.svg), url(../images/bg-stars.svg);
-  background-repeat: no-repeat;
-  background-size: 400%, 200%;
-  background-position: bottom 0% left 80%, top 10% left 0%;
   background-color: #1a1520;
 }
 
+#starsBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#mountainBg {
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+}
+
 @media (min-width: 768px) {
-  body {
-    background-size: 100%, 150%;
-    background-position: bottom 0% left 80%, top 10% left 0%;
+  #mountainBg {
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    -webkit-transition: ease 0.25s;
+    transition: ease 0.25s;
   }
 }
 
@@ -243,6 +254,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
+  z-index: 2;
 }
 
 /* SOCIAL MEDIA ICONS */

@@ -20,18 +20,25 @@ body {
   
   font-family: 'Red Hat Text', sans-serif;
   text-align: center;
-  background-image: url(../images/pattern-hills.svg), url(../images/bg-stars.svg);
-  background-repeat: no-repeat;
-  background-size: 400%, 200%;
-  background-position: bottom 0% left 80%, top 10% left 0%;
   background-color: rgb(26, 21, 32);
 }
-
+#starsBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#mountainBg {
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+}
 @media (min-width: 768px) {
-    body {
-        background-size: 100%, 150%;
-        background-position: bottom 0% left 80%, top 10% left 0%;
-    }
+  #mountainBg {
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    transition: ease 0.25s;
+  }
 }
 
 .title {
@@ -78,8 +85,8 @@ body {
   margin-bottom: 30px;
 }
 @media (min-width: 768px) {
-  .card { font-size: 6vw; }
-  .flip-clock__slot { font-size: 1.2vw; }
+  .card { font-size: 6vw;}
+  .flip-clock__slot { font-size: 1.2vw;}
 }
 
 .card__top,
@@ -183,6 +190,7 @@ body {
     bottom: 2px;
     left: 50%;
     transform: translate(-50%, 0%);
+    z-index: 2;
 }
   
   /* SOCIAL MEDIA ICONS */
